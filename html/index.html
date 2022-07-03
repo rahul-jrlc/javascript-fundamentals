@@ -9,6 +9,20 @@
   <body>
     <h1>Hello World</h1>
     <h4>Lorem ipsum dolor sit.</h4>
-    <button onclick="alert('hello world')">click me</button>
+    <button class="button">random button</button>
+    <button class="button">random button</button>
+    <button class="button">random button</button>
+    <button class="button">random button</button>
+    <button class="button">random button</button>
+    <button class="button">random button</button>
+    <button class="button">random button</button>
+    <button class="button">random button</button>
+    <script>
+      document.querySelectorAll(".button").forEach((item) => {
+        item.addEventListener("click", () => {
+          alert("AWESOME");
+        });
+      });
+    </script>
   </body>
 </html>
