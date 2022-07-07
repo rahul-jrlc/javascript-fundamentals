@@ -1,18 +1,17 @@
-// VARIABLES - MOST BASIC BUILDING BLOCK
-// VARIABLES - STORE, ACCESS, MODIFY === VALUE
-// DECLARE, ASSIGNMENT OPERATOR, ASSIGN VALUE
-// ASSIGN VALUE LATER, MODIFY EXISTING
+// LET V/S CONST V/S VAR
 
-let firstName = "eenu meenu peenu";
-let address, zipCode, state; // DECLARES VARIABLES, UNDEFINED
-console.log(state);
+// USING VAR
+var value = "some value";
+value = "new value"
 
-address = "101 second street" // ASSIGN VALUE LATER
-console.log(address);
-zipCode = 12232
-state = "Haryana"
+// USING LET
+let name = "john";
+name = "peter"
 
-console.log(firstName, zipCode, address);
+// USING CONST-- CANNOT REASSIGN
+const lastName = "jordan";
+// lastName = "blahblah"
 
-firstName = "Chinku" // MODIFY EXISTING VARIABLE VALUE
-console.log(firstName)
+console.log(value);
+console.log(name);
+console.log(lastName);
