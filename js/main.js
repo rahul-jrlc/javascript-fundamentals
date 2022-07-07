@@ -1,24 +1,27 @@
-// IMPLICIT TYPE CONVERSION
+// DATA TYPES
+// PRIMITIVE - STRING, NUMBER, BOOLEAN, NULL, UNDEFINED, SYMBOL
+// OBJECT- ARRAYS, FUNCTIONS, OBJECTS
+// TYPEOF()
 
-const name = "john";
-const lastName = "jordan";
-const fullName = name + " " + lastName;
-console.log(fullName);
+// STRING
+const text = "some text"
+console.log(typeof text);
 
-const num1 = 4;
-const num2 = 10;
-const result = num1 + num2;
-console.log(result);
+// NUMBER
+const num = 909;
+console.log(typeof num);
 
-const value = name - lastName;
-console.log(value);  // NaN
+// BOOLEAN
+let val1 = true;
+let val2 = false;
+console.log(typeof val1);
 
-let num3 = '10';
-let num4 = '20';
-const result2 = num3 - num4; // IMPLICIT TYPE CONVERSION
-console.log(result2);  // SHOWS RESULT AS INTEGER
+// NULL
+const result = null;
+console.log(null);
 
-const result4 = num3 + num4; // NOT ADDED AS INTEGERS, STRING CONCATENATION
-console.log(result4);
+// UNDEFINED
+let name;
+console.log(typeof name);
 
-console.log(10 + "333"); // A STRING
+// SYMBOL(ES6)
