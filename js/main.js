@@ -1,17 +1,22 @@
 // OBJECT DATA TYPES- ARRAYS, FUNCTIONS, OBJECTS
 // FUNCTIONS- DECLARE, INVOKE
-// PARAMETERS - WHEN DECLARE/DEFINE FUNCTION
-// PLACEHOLDERS, LOCAL VARS
-// ARGUMENTS - WHEN INVOKE/CALL/RUN
-// USE VARS/VALUES, MULTIPLE PARAMS, UNDEFINED
+// RETURN
+// DEFAULT UNDEFINED, SHORTCUTS, IGNORES AFTER
 
-function hello(name = "Pinky") { // PARAMETER // DEFAULT PARAM
-    console.log(`Hello there ${name}`);
+// 1 INCH = 2.54 CM
+
+const wallHeight = 80;
+
+function calculate(value) {
+    // const newValue = value * 2.54;
+    return value * 2.54;
+    console.log("heheheh"); // AFTER RETURN, EVERYTHING IS IGNORED
 }
 
-hello("bob"); // ARGUMENT
-hello("tinku");
-hello();
-hello(3);
+// ALL FUNCTIONS WILL RETURN UNDEFINED VALUE BY DEFAULT UNLESS SPECIFIED WHAT THE FUNCTION WILL RETURN
 
-console.log(name); // NOT ACCESSIBLE, VARIABLE LOCAL TO FUNCTION
+const width = calculate(100);
+const height = calculate(wallHeight);
+
+const dimensions = [width, height];
+console.log(dimensions);
