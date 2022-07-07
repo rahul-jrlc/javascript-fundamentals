@@ -1,26 +1,17 @@
 // OBJECT DATA TYPES- ARRAYS, FUNCTIONS, OBJECTS
 // FUNCTIONS- DECLARE, INVOKE
+// PARAMETERS - WHEN DECLARE/DEFINE FUNCTION
+// PLACEHOLDERS, LOCAL VARS
+// ARGUMENTS - WHEN INVOKE/CALL/RUN
+// USE VARS/VALUES, MULTIPLE PARAMS, UNDEFINED
 
-function hello() {  // DECLARED A FUNCTION
-    // logic
-    console.log("bob");
-    console.log("ana");
-    console.log("tinku");
+function hello(name = "Pinky") { // PARAMETER // DEFAULT PARAM
+    console.log(`Hello there ${name}`);
 }
 
-hello();  // INVOKING A FUNCTION
+hello("bob"); // ARGUMENT
+hello("tinku");
+hello();
+hello(3);
 
-
-
-// console.log("bob");
-// console.log("ana");
-// console.log("tinku");
-// // some code here
-// console.log("bob");
-// console.log("ana");
-// console.log("tinku");
-// // some code here
-// console.log("bob");
-// console.log("ana");
-// console.log("tinku");
-// // some code here
+console.log(name); // NOT ACCESSIBLE, VARIABLE LOCAL TO FUNCTION
