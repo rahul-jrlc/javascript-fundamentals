@@ -1,27 +1,19 @@
-// DATA TYPES
-// PRIMITIVE - STRING, NUMBER, BOOLEAN, NULL, UNDEFINED, SYMBOL
-// OBJECT- ARRAYS, FUNCTIONS, OBJECTS
-// TYPEOF()
+// OBJECT DATA TYPES- ARRAYS, FUNCTIONS, OBJECTS
+// ARRAYS - [], 0 INDEX BASED
 
-// STRING
-const text = "some text"
-console.log(typeof text);
+const friend1 = "tinku";
+const friend2 = "tinku";
+const friend3 = "tinku";
+const friend4 = "tinku";
 
-// NUMBER
-const num = 909;
-console.log(typeof num);
+const friends = ["john", "peter", "meenu", "tinku", 47, undefined, null];
 
-// BOOLEAN
-let val1 = true;
-let val2 = false;
-console.log(typeof val1);
+let bestFriend = friends[2];
 
-// NULL
-const result = null;
-console.log(null);
+friends[4] = 'veeru';  // CAN REASSIGN VALUES BASED ON INDEXES
+console.log(friends);
+console.log(friends[4]);
 
-// UNDEFINED
-let name;
-console.log(typeof name);
+console.log(bestFriend);
 
-// SYMBOL(ES6)
+console.log(friends[0]);
