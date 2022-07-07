@@ -1,22 +1,27 @@
 // NUMBERS
 // LOOSELY TYPED = DON'T DECLARE TYPE IN JAVASCRIPT
+// += , -=, /=, *=, ++, --. %
+// MODULUS (%) RETURNS THE REMAINDER AFTER INTEGER DIVISION
 
-const num = 34;
-// let num2 = 2.443;
-// num2 = 'helloooo';
+let number = 40;
+number += 5;
+console.log(number)
 
-const num2 = 2.344;
-console.log(num2);
+number -= 10;
+console.log(number);
 
-const num3 = "2.344";
-console.log(num3);
+number /= 5;
+console.log(number);
 
-const add = num + num2;
-const sub = num - num2;
-const mult = num * num2;
-const div = num / num2;
+number *= 5;
+console.log(number);
 
-console.log(add);
-console.log(sub);
-console.log(mult);
-console.log(div);
+const slices = 10;
+const children = 4;
+const amount = slices % children;
+console.log(amount);
+
+const random = 4 + 6 + 10 * 10; // PEMDAS FOLLOWED IN JAVASCRIPT
+const random2 = (4 + 6 + 10) * 10;
+console.log(random);
+console.log(random2);
