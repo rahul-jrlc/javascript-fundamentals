@@ -1,8 +1,5 @@
-// HELPER METHODS
-// DOCUMENT.WRITE("HELLO")
-// ALERT("HELLO")
-// CONSOLE.LOG("HELLO")
+// STATEMENTS AND COMMENTS
+// STATEMENTS-- SET OF INSTRUCTIONS
 
-document.write("hello world how are you") // WRITES SOME EXPRESSION TO HTML DOC, SHOWN ON WEBPAGE
-alert("hello people")
-console.log("hello world")
+console.log("Hello world"); // A STATEMENT
+console.log("bye bye");
