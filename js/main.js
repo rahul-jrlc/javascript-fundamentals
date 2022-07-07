@@ -1,5 +1,6 @@
-// STATEMENTS AND COMMENTS
-// STATEMENTS-- SET OF INSTRUCTIONS
+// VARIABLES - MOST BASIC BUILDING BLOCK
+// VARIABLES - STORE, ACCESS, MODIFY === VALUE
+// DECLARE, ASSIGNMENT OPERATOR, ASSIGN VALUE
 
-console.log("Hello world"); // A STATEMENT
-console.log("bye bye");
+let firstName = "eenu meenu peenu";
+console.log(firstName);
