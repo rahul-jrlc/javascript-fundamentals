@@ -1,17 +1,12 @@
-// LET V/S CONST V/S VAR
+// STRING CONCATENATION -- COMBINE STRING VALUES
+// `` - BACKTICKS-- TEMPLATE STRINGS
 
-// USING VAR
-var value = "some value";
-value = "new value"
+// const name = "john";
+// const lastName = "blahblah";
+// let fullName = name + ' ' + lastName
 
-// USING LET
-let name = "john";
-name = "peter"
+// console.log("Hello there your full name is : " + fullName);
 
-// USING CONST-- CANNOT REASSIGN
-const lastName = "jordan";
-// lastName = "blahblah"
-
-console.log(value);
-console.log(name);
-console.log(lastName);
+const website = "google";
+const url = "https://www." + website + ".com";
+console.log(url);
