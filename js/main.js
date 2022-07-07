@@ -1,27 +1,24 @@
-// NUMBERS
-// LOOSELY TYPED = DON'T DECLARE TYPE IN JAVASCRIPT
-// += , -=, /=, *=, ++, --. %
-// MODULUS (%) RETURNS THE REMAINDER AFTER INTEGER DIVISION
+// IMPLICIT TYPE CONVERSION
 
-let number = 40;
-number += 5;
-console.log(number)
+const name = "john";
+const lastName = "jordan";
+const fullName = name + " " + lastName;
+console.log(fullName);
 
-number -= 10;
-console.log(number);
+const num1 = 4;
+const num2 = 10;
+const result = num1 + num2;
+console.log(result);
 
-number /= 5;
-console.log(number);
+const value = name - lastName;
+console.log(value);  // NaN
 
-number *= 5;
-console.log(number);
+let num3 = '10';
+let num4 = '20';
+const result2 = num3 - num4; // IMPLICIT TYPE CONVERSION
+console.log(result2);  // SHOWS RESULT AS INTEGER
 
-const slices = 10;
-const children = 4;
-const amount = slices % children;
-console.log(amount);
+const result4 = num3 + num4; // NOT ADDED AS INTEGERS, STRING CONCATENATION
+console.log(result4);
 
-const random = 4 + 6 + 10 * 10; // PEMDAS FOLLOWED IN JAVASCRIPT
-const random2 = (4 + 6 + 10) * 10;
-console.log(random);
-console.log(random2);
+console.log(10 + "333"); // A STRING
