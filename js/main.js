@@ -1,24 +1,26 @@
-// OBJECT DATA TYPES- ARRAYS, FUNCTIONS, OBJECTS
-// OBJECTS- KEY/VALUE PAIRS --- METHODS
-// DOT NOTATION
+// CONDITIONAL STATEMENTS
+// >, <, >=, <=, ==, ===, !=, !===
 
-const person = {
-    name: "john",
-    lastName: 'johnny',
-    age: 222,
-    education: false,
-    married: true,
-    siblings: ['minu', 'pinky', 'alal'],
-    greeting: function sayHello() {
-        console.log("my name is pinky");
-    }
-};
+// if (true) {
+//     console.log("hello");
+// }
 
-const age = person.age;
-console.log(age);
+// if (2>1) {
+//     console.log("hello");
+// }
 
-person.name = 'lululu';
+// const value = true;
 
-console.log(person.name);
-console.log(person.siblings[2]);
-person.greeting();
+const value = 2 > 0;
+
+// if (false) {   // CODE WON'T RUN
+//     console.log("hello");
+// } else {
+//     console.log("value is false");
+// }
+
+if (value) {   
+    console.log("hello");
+} else {
+    console.log("value is false");
+}
