@@ -1,12 +1,13 @@
 // LOOPS
 // REPEATEDLY RUN A BLOCK OF CODE WHILE CONDITION IS TRUE
-// DO WHILE LOOP
-// CODE BLOCK FIRST, CONDITION SECOND
-// RUNS AT LEAST ONCE
+// FOR LOOP
 
-let money = 12;
+let i;
 
-do {
-    console.log(`you have ${money} dollars.`); // CODE BLOCK EXECUTED FIRST. CODE RUNS AT LEAST ONCE
-    money++;
-} while (money < 10);  // CONDITION SECOND
+// for (i = 0; i < 10; i++) {
+//     console.log(`the number is: ${i}`);
+// }
+
+for (let number = 11; number >= 0; number--){
+    console.log(`the number is: ${number}`);
+}
