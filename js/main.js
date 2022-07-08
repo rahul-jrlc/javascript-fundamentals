@@ -1,22 +1,27 @@
 // OBJECT DATA TYPES- ARRAYS, FUNCTIONS, OBJECTS
 // FUNCTIONS- DECLARE, INVOKE
-// RETURN
-// DEFAULT UNDEFINED, SHORTCUTS, IGNORES AFTER
-
+// EXPRESSIONS- ANOTHER WAY TO DEFINE A FUNCTION
+// CREATE A VARIABLE, ASSIGN TO FUNCTION(NOT VALUE), USE VAR
+// DIFF- HOISTING, USE- ARROW FUNC, LIBRARIES
 // 1 INCH = 2.54 CM
 
-const wallHeight = 80;
-
-function calculate(value) {
-    // const newValue = value * 2.54;
-    return value * 2.54;
-    console.log("heheheh"); // AFTER RETURN, EVERYTHING IS IGNORED
+// FUNCTOIN DEFINITION/ DECLARATION
+function addValues(num1, num2) {
+    return num1 + num2;
 }
 
-// ALL FUNCTIONS WILL RETURN UNDEFINED VALUE BY DEFAULT UNLESS SPECIFIED WHAT THE FUNCTION WILL RETURN
+const firstValue = addValues(1, 3);  // INVOKING FUNCTION
+const secondValue = addValues(9, 10);
 
-const width = calculate(100);
-const height = calculate(wallHeight);
 
-const dimensions = [width, height];
-console.log(dimensions);
+// FUNCTION EXPRESSION
+const add = function (num1, num2) { // ANONYMOUS FUNC
+    return num1 + num2;
+}
+
+// const thirdValue = add(5, 6);
+
+const values = [firstValue, secondValue, add(5,6)];
+console.log(values);
+
+const multiply = (n1, n2) => n1 * n2; //ARROW FUNCTIONS(ONLY STORED AS FUNC EXPRESSIONS)
