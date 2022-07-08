@@ -1,26 +1,18 @@
 // CONDITIONAL STATEMENTS
 // >, <, >=, <=, ==, ===, !=, !===
+// else if and !
 
-// if (true) {
-//     console.log("hello");
-// }
+const num1 = 4;
+const num2 = 4
 
-// if (2>1) {
-//     console.log("hello");
-// }
-
-// const value = true;
-
-const value = 2 > 0;
-
-// if (false) {   // CODE WON'T RUN
-//     console.log("hello");
+// if (num1 > num2) {
+//     console.log('blah');
 // } else {
-//     console.log("value is false");
+//     console.log('bbb');
 // }
 
-if (value) {   
-    console.log("hello");
-} else {
-    console.log("value is false");
+const value = false;
+
+if (!value) {  // IF VALUE NOT TRUE
+    console.log("value true");
 }
