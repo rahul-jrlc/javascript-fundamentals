@@ -1,18 +1,14 @@
 // CONDITIONAL STATEMENTS
 // >, <, >=, <=, ==, ===, !=, !===
-// else if and !
+// EQUALITY
+// == CHECKS ONLY VALUE
+// CHECKS VALUE AND TYPE
 
-const num1 = 4;
-const num2 = 4
+const num1 = 6;
+const num2 = '6';
 
-// if (num1 > num2) {
-//     console.log('blah');
-// } else {
-//     console.log('bbb');
-// }
+const value = num1 == num2;  // CHECKS ONLY VALUE
+const value2 = num1 === num2; // CHECKS VALUE AND TYPE
 
-const value = false;
-
-if (!value) {  // IF VALUE NOT TRUE
-    console.log("value true");
-}
+console.log(value);
+console.log(value2);
