@@ -1,35 +1,20 @@
-// GLOBAL SCCPE VS LOCAL SCOPE
-// LOCAL SCOPE
-// CANNOT BE ACCESSED FROM OUTSIDE CODE BLOCKS
-// IF - NOT VAR
+// VARIABLE LOOKUP
+// {} - CODE BLOCK
 
-let name = "bobo";
+//DOES NOT WORK THE OPPOSITE WAY
 
-// const name = "jojo";  // NAME COLLISIONS
+const globalNumber = 5; // GLOBAL SCOPE
 
-const name2 = "jojo";
-
-function calculate() {
-    const name = "john";
-    const age = 23;
-    // some more code
-    becomesGlobal = "GLOBAL VARIABLE";
+function addNum(num1, num2) {
+    const globalNumber = 100;
+    const result = num1 + num2 + globalNumber; // ENCLOSING SCOPE
+    function multiply() {
+        const globalNumber = 0; // LOCAL SCOPE
+        const multiplyResult = result * globalNumber;
+        console.log(multiplyResult);
+    }
+    multiply()
+    return result;
 }
 
-
-calculate();
-
-
-console.log(becomesGlobal); // CANNOT ACCESS AGE VARIABLE AS IT IS DEFINED INSIDE A CODE BLOCK- LOCALLY
-
-if (true) {
-    const name = "pinky";
-}
-
-{
-    const name = "kklk";
-    const special = "hulu";
-}
-console.log(special);
-
-console.log(`my name is ${name} and i am awesome.`);
+console.log(addNum(3, 10));
