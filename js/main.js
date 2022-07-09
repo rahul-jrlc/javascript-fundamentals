@@ -1,16 +1,23 @@
-// NULL AND UNDEFINED
-// BOTH REPRESENT NO VALUE
+// TRUTHY AND FALSY
+// "", '', ``,0, -0, NaN, FALSE, NULL, UNDEFINED
 
-// UNDEFINED - "JAVASCRIPT CANNOT FIND VALUE FOR THIS"
+const bool1 = true;
+const bool2 = 2 > 1;
 
-// VARIABLE WITHOUT VALUE
-// MISSING FUNCTION ARGUMENTS
-// MISSING OBJECT PROPERTIES
 
-// NULL - DEVELOPER SETS THE VALUE
+const text = "";
 
-let num = 20 + null; // 20 + 0;
-console.log(num);
+if (text) {
+    console.log('truthy');
+} else {
+    console.log("falsy value");
+}
 
-let num2 = 20 + undefined; // 20 + 0;
-console.log(num2);
+
+
+// if (true) {
+//     console.log(`works`);
+// }
+// if (bool2) {
+//     console.log(`also works`);
+// }
