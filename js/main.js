@@ -1,32 +1,35 @@
 // GLOBAL SCCPE VS LOCAL SCOPE
-// ANY VARIABLE OUTSIDE CODE BLOCK{} IS SAID TO BE IN GLOBAL SCOPE
-// CAN BE ACCESSED ANYWHERE IN THE PROGRAM
-// ISSUES: NAME COLLISIONS, MODIFY BY MISTAKE
+// LOCAL SCOPE
+// CANNOT BE ACCESSED FROM OUTSIDE CODE BLOCKS
+// IF - NOT VAR
 
 let name = "bobo";
-name = "peter";
+
 // const name = "jojo";  // NAME COLLISIONS
 
 const name2 = "jojo";
 
 function calculate() {
-    // some other code
-    console.log(name);
-    name = 'orange';
-    function inner() {
-        name = "inner name";
-        console.log(`from inner func: ${name}`);
-    }
-    inner()
+    const name = "john";
+    const age = 23;
+    // some more code
+    becomesGlobal = "GLOBAL VARIABLE";
 }
+
 
 calculate();
 
+
+console.log(becomesGlobal); // CANNOT ACCESS AGE VARIABLE AS IT IS DEFINED INSIDE A CODE BLOCK- LOCALLY
+
 if (true) {
-    // some code 
-    console.log(name);
-    name = "pants"
+    const name = "pinky";
 }
 
+{
+    const name = "kklk";
+    const special = "hulu";
+}
+console.log(special);
 
 console.log(`my name is ${name} and i am awesome.`);
