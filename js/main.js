@@ -1,23 +1,21 @@
-// TRUTHY AND FALSY
-// "", '', ``,0, -0, NaN, FALSE, NULL, UNDEFINED
+// UNARY OPERATOR - TYPEOF
+let text = "blah blah";
+// console.log(typeof text); // OPERAND
 
-const bool1 = true;
-const bool2 = 2 > 1;
-
-
-const text = "";
-
-if (text) {
-    console.log('truthy');
-} else {
-    console.log("falsy value");
-}
+// BINARY OPERATOR
+let num = 3;
+let num2 = 2 + 5;
 
 
+// TERNARY OPERATOR
+// CONDITION ? (RUNS IF TRUE) : (RUNS IF FALSE)
 
-// if (true) {
-//     console.log(`works`);
-// }
-// if (bool2) {
-//     console.log(`also works`);
+const value = -2 > 1;
+
+value ? console.log("value true") : console.log("false");
+
+// if (value) {
+//     console.log('true value');
+// } else {
+//     console.log('value false');
 // }
