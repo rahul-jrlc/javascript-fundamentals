@@ -1,41 +1,15 @@
-// ARRAY PROPERTIES AND METHODS
+// ARRAYS AND FOR LOOPS
+// EXERCISE - FULL NAME
 
-let names = ["john", "bob", "tinku", "pinky", "sujata"];
+const firstNames = ["bob", "tinku", "pinky"];
+const lastname = "hidimba";
 
-// LENGTH
-console.log(names.length); // PROPERTY
-console.log(names[3]);
-console.log(names[names.length - 1]); // RETURNS LAST ITEM IN ARRAY
+let newArray = [];
 
-// CONCAT -- COMBINE TWO ARRAYS
-const lastNames = ["lulu", "tulu", "bravo", "gupta"];
-const allNames = names.concat(lastNames);
-console.log(allNames);
+for (let i = 0; i < firstNames.length; i++) {
+    let fullName = `${firstNames[i]} ${lastname}`
+    newArray.push(fullName)
+    // console.log(newArray);
+}
 
-// REVERSE ARRAY
-console.log(allNames.reverse());
-console.log(allNames);  // MODIFIES EXISTING ARRAY
-
-// UNSHIFT - ADD TO BEGINNING OF ARRAY
-allNames.unshift("jojojo"); // RUNS IN PLACE, MODIFIES ARRAY
-console.log(allNames);
-
-// SHIFT - REMOVES FIRST ITEM FROM ARRAY
-allNames.shift();
-console.log(allNames);
-console.log(allNames.shift()); // RETURNS THE SHIFTED ITEM
-
-// PUSH - APPENDS NEW ELEMENTS TO END OF ARRAY
-allNames.push('NEW ELEMENT')
-console.log(allNames.push("NEW ELEMENT 2")); // RETURNS MODIFIED ARRAY LENGTH
-console.log(allNames);
-
-// POP -- REMOVES ITEM FROM END OF ARRAY
-allNames.pop();
-console.log(allNames);
-console.log(names.pop()); // RETURNS POPPED ITEM
-
-// SPLICE - GRAB SPECIFIC ITEMS FROM ARRAY -- MUTATES ORIGINAL ARRAY
-allNames.splice(2); // START, NUMBER OF ELEMENTS TO REMOVE
-console.log(allNames);
-
+console.log(newArray);
