@@ -1,30 +1,24 @@
-// EXERCISE - CALCULATE TOTAL
-// FUNCTIONS, RETURN, IF, ARRAYS, FOR LOOP
+// REFERENCE V/S VALUE
+// PRIMITIVE DATA TYPES- STRING, NUMBER, BOOLEAN, UNDEFINED, NULL, SYMBOL
+// OBJECT DATA TYPES - ARRAY, FUNCTIONS, OBJECTS
+// TYPEOF
 
-const gas = [20, 40, 100];
-const food = [22, 433, 32];
+// WHEN ASSIGNING PRIMITIVE DATA TYPE VALUE TO A VARIABLE ANY CHANGES MADE ARE MADE DIRECTLY TO THAT VALUE, WITHOUT AFFECTING ORIGINAL VALUE
 
-function calculateTotal(arr) {
-    let total = 0;
-    for (let i = 0; i < arr.length; i++) {
-        total += arr[i];
-        
-    }
-    if (total > 100) {
-        console.log(`PAGAL HAI KYA BHOSDIKE`);
-        return total;
-    }
-    console.log(`GOOD NICE`);
-    return total; // RETURN ALLOWS TO ASSIGN FUNCTION RESULT TO A VARIABLE
-}
+// WHEN ASSIGNING NON-PRIMITIVE DATA TYPE VALUE TO A VARIABLE IS DONE BY REFERENCE SO ANY CHANGES WILL AFFECT ALL REFERENCES.
 
-const gasTotal = calculateTotal(gas); 
-// INVOKING FUNCTION RETURNED VALUE, ASSIGNED TO VARIABLE
-const foodTotal = calculateTotal(food);
+const num = 1;
+let num2 = num;
+num2 = 7;
+console.log(`first value is ${num}`);
+console.log(`second value is ${num2}`);
 
-console.log(
-    {
-        gas: gasTotal,
-        food: foodTotal
-    }
-);
+let person = {
+    name: 'bob'
+};
+let person2 = person;
+
+person2.name = 'pinky';
+
+console.log(`the name of the first person is ${person.name}`);
+console.log(`the name of the second person is ${person2.name}`);
