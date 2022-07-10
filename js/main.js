@@ -15,28 +15,29 @@
 // DOES NOT RETURN NEW ARRAY
 
 const people = [
-    { name: "lulu", age: 20, position: "developer" },
-    { name: "pinky", age: 33, position: "designer" },
-    { name: "montu", age: 77, position: "ceo" }
+    { name: "lulu", age: 20, position: "developer", id: 1 },
+    { name: "pinky", age: 33, position: "designer", id: 2 },
+    { name: "montu", age: 77, position: "ceo", id: 3 }
 ];
 
-// FILTER
-// DOES RETURN A NEW ARRAY
-// CAN MANIPULATE THE SIZE OF NEW ARRAY
-// RETURNS BASED ON CONDITION
+// FIND
+// RETURNS SINGLE INSTANCE -(IN THIS CASE, AN OBJECT)
+// RETURNS FIRST MATCH, IF NO MATCH UNDEFINED
+// GREAT FOR GETTING UNIQUE VALUES
 
-// FILTER RETURNS THE ELEMENTS OF AN ARRAY THAT MEET CONDITION SPECIFIED IN CALLBACK FUNCTION
-const youngPeople = people.filter(function (person) {
-    return person.age <= 23;
+const person = people.find(function (person) {
+    return person.id === 2;
 })
-console.log(youngPeople);
 
-const boss = people.filter(function (person) {
-    return person.position === "ceo";
-})
-console.log(boss);
+console.log(person);
 
-const job = people.filter(function (person) {
-    return person.position === "hr manager";
+const names = ["kuku", "pintu", "bunny", "kaku"];
+console.log(names.find(function(name) {
+    return name === "chintu";  // UNDEFINED
+}));
+
+const person2 = people.filter(function (person) {
+    return person.id === 2;
 })
-console.log(job); //RETURNS AN EMPTY ARRAY, CONDITION NOT MET
+// FILTER WILL RETURN AN ARRAY
+console.log(person2);
