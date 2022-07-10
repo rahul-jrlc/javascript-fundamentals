@@ -26,3 +26,7 @@ heading.classList.add("blue");
 // result.appendChild(heading);
 
 console.log(result.children);
+
+// REPLACE CHILD (OLD , NEW)
+
+document.body.replaceChild(h1, heading);
