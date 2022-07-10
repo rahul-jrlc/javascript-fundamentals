@@ -20,12 +20,30 @@ const people = [
     { name: "montu", age: 77, position: "ceo" }
 ];
 
-function showPerson(person) {
-    console.log(person.position.toUpperCase());
-}
+// MAP
+// DOES RETURN A NEW ARRAY
+// DOES NOT CHANGE SIZE OF ORIGINAL ARRAY
+// USES VALUES FROM ORIGINAL ARRAY WHEN MAKING NEW ONE
 
-// FOR EACH CALLS THE CALLBACK FUNCTION FOR EACH ITEM IN ARRAY ONE TIME
-// people.forEach(showPerson); 
-people.forEach(function (item) {
-    console.log(item.name.toUpperCase());
+// MAP CALLS A CALLBACK FUNCTION ON EACH ELEMENT OF AN ARRAY, AND RETURNS THE RESULTS IN A NEW ARRAY
+const ages = people.map(function (person) {
+    // console.log(person);
+    return person.age;
 })
+const newPeople = people.map(function (person) {
+    return {
+        firstName: person.name.toUpperCase(),
+        oldAge: person.age + 100
+    };
+})
+
+console.log(newPeople);
+console.log(ages);
+
+const names = people.map(function (person) {
+    return `<h1>${person.name.toUpperCase()}</h1>`;
+})
+
+document.body.innerHTML = names.join('');
+
+console.log(names);
