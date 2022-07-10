@@ -1,10 +1,22 @@
-// NODE VALUE
-// TEXT CONTENT
+// GET ATTRIBUTE()
+// SET ATTRIBUTE()
 
-const item = document.getElementById("special");
-const value = item.firstChild.nodeValue;
-// console.log(value); // RETURNS NULL
-console.log(item);
+const first = document.querySelector(".first");
+const idName = first.getAttribute("id");
+// console.log(idName);
 
-const easy = item.textContent;
-console.log(easy);
+const link = document.getElementById("link");
+const showLink = link.getAttribute("href");
+console.log(showLink);
+
+
+const last = link.nextElementSibling;
+console.log(last);
+last.setAttribute("class", "first");
+last.textContent = "also class of first"
+console.log(last);
+
+
+
+const links = document.querySelector(".first");
+console.log(links);
