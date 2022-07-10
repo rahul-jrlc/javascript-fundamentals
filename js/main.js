@@ -1,11 +1,16 @@
-// GET ELEMENT BY ID
+// GET ELEMENTS BY TAG NAME
+// NODE-LIST IS AN ARRAY LIKE OBJECT
+// INDEX, LENGTH PROPERTY BUT NOT ARRAY METHODS
 
-const h1 = document.getElementById("title"); // GIVES ACCESS TO NODE OBJECT
-h1.style.color = "red";
+const headings = document.getElementsByTagName("h2"); // RETURNS A NODE LIST CONTAINING ALL H2
+// console.log(headings); // ARRAY LIKE BUT NOT EXACTLY
+headings[0].style.color = "red";
+// console.log(headings.length);
 
-// document.getElementById("button").style.background = "blue";
-// document.getElementById("button").style.color = "white";
+const items = document.getElementsByTagName("li");
 
-const button = document.getElementById("button");
-button.style.background = "blue";
-button.style.color = "white";
+// items.forEach(function (item) { // WILL NOT WORK, NOT AN ARRAY
+//     console.log(item);
+// })
+
+items[2].style.color = 'blue';
