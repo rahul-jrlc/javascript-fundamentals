@@ -1,38 +1,21 @@
-// ARRAY ITERATORS
-// FOREACH, MAP, FILTER, FIND, REDUCE
-// ITERATE OVER ARRAY, NO FOR LOOP REQUIRED
-// ACCEPT CALLBACK FUNCTION AS AN ARGUMENT, CALLS CALLBACK AGAINST EACH ITEM IN AN ARRAY. REFERENCE ITEM IN THE CALLBACK PARAMETER
-
-// const numbers = [0, 1, 2, 3, 4];
-
-// // SHOW ALL NUMBERs
-
-// for (let i = 0; i < numbers.length; i++) {
-//     console.log(i);
-// }
-
-// FOREACH
-// DOES NOT RETURN NEW ARRAY
-
-const people = [
-    { name: "lulu", age: 20, position: "developer", id: 1, salary: 200 },
-    { name: "pinky", age: 33, position: "designer", id: 2 , salary: 100},
-    { name: "montu", age: 77, position: "ceo", id: 3, salary: 500 }
-];
-
-// REDUCE
-// ITERATES, CALLBACK FUNCTION
-// REDUCES TO A SINGLE VALUE - NUMBER, ARRAY, OBJECT
-// 1 PARAMETER ('ACC') - TOTAL OF ALL CALCULATIONS
-// 2 PARAMETER ('CURR') - CURRENT ITERATION/VALUE
+// MATH
+// STANDARD BUILT-IN OBJECTS - ALWAYS AVAILABLE
 
 
-// RETURN VALUE IS THE ACCUMULATED RESULT, 
-const total = people.reduce(function (acc, currItem) {
-    console.log(`total: ${acc}`);
-    console.log(`current money: ${currItem.salary}`);
-    acc += currItem.salary
-    return acc;
-}, 0) // SECOND ARGUMENT 0 IS THE ACC STARTING VALUE
+// const num = 4.3422988;
+// const result = Math.floor(num);
 
-console.log(total);
+// const result = Math.ceil(2.000000001)
+
+// const result = Math.sqrt(100);
+
+// const result = Math.PI;
+
+// const result = Math.min(2, 99, 10000, 0, -2);
+
+// const result = Math.max(1, 2, 3, 4, 5, 6, 7, 8, 9, 99999, -1);
+
+
+// const result = Math.random() * 10;
+const result = Math.floor((Math.random() * 10) + 1)
+console.log(result);
