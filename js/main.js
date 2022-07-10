@@ -1,22 +1,16 @@
-// GET ATTRIBUTE()
-// SET ATTRIBUTE()
+// CLASS LIST
+// CLASS NAME
 
-const first = document.querySelector(".first");
-const idName = first.getAttribute("id");
-// console.log(idName);
+const first = document.getElementById("first");
+const second = document.getElementById("second");
+const third = document.getElementById("third");
 
-const link = document.getElementById("link");
-const showLink = link.getAttribute("href");
-console.log(showLink);
+const className = first.className; // CHECK FOR CLASS NAME OF ELEMENT
+// console.log(className);
 
+second.className = "text colors";
 
-const last = link.nextElementSibling;
-console.log(last);
-last.setAttribute("class", "first");
-last.textContent = "also class of first"
-console.log(last);
+third.classList.add("colors", "text");
+third.classList.remove("colors");
+console.log(third.classList);
 
-
-
-const links = document.querySelector(".first");
-console.log(links);
