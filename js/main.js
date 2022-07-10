@@ -1,16 +1,26 @@
-// CLASS LIST
-// CLASS NAME
+// CREATE ELEMENT("ELEMENT")
+// CREATE TEXT NODE("TEXT")
+// APPEND CHILD
 
-const first = document.getElementById("first");
-const second = document.getElementById("second");
-const third = document.getElementById("third");
+const result = document.querySelector("#result");
 
-const className = first.className; // CHECK FOR CLASS NAME OF ELEMENT
-// console.log(className);
+// create empty element
 
-second.className = "text colors";
+const bodyDiv = document.createElement("div");
 
-third.classList.add("colors", "text");
-third.classList.remove("colors");
-console.log(third.classList);
+// create text node
+const text = document.createTextNode("a simple body div");
 
+//append text node to body div
+bodyDiv.appendChild(text);
+
+// APPEND TO BODY IN HTML DOC
+document.body.appendChild(bodyDiv);
+
+const heading = document.createElement("h2");
+const headingText = document.createTextNode("Dynamic heading");
+heading.appendChild(headingText);
+heading.classList.add("blue");
+result.appendChild(heading);
+
+console.log(result.children);
