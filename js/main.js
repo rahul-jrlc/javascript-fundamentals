@@ -1,11 +1,10 @@
-// NODE-LIST IS AN ARRAY LIKE OBJECT
-// INDEX, LENGTH PROPERTY BUT NOT ARRAY METHODS
+// NODE VALUE
+// TEXT CONTENT
 
-// PREVIOUS ELEMENT SIBLING
-// NEXT ELEMENT SIBLING
+const item = document.getElementById("special");
+const value = item.firstChild.nodeValue;
+// console.log(value); // RETURNS NULL
+console.log(item);
 
-const first = document.querySelector(".first");
-first.nextElementSibling.style.color = "red";
-// NO NEED TO WORRY ABOUT WHITESPACE
-
-const last = document.querySelector("#last");
+const easy = item.textContent;
+console.log(easy);
