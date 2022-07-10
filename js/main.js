@@ -1,6 +1,7 @@
 // CREATE ELEMENT("ELEMENT")
 // CREATE TEXT NODE("TEXT")
 // APPEND CHILD
+// INSERT BEFORE ("ELEMENT", "LOCATION")
 
 const result = document.querySelector("#result");
 
@@ -15,12 +16,13 @@ const text = document.createTextNode("a simple body div");
 bodyDiv.appendChild(text);
 
 // APPEND TO BODY IN HTML DOC
-document.body.appendChild(bodyDiv);
+// document.body.appendChild(bodyDiv);
+document.body.insertBefore(bodyDiv, result);
 
 const heading = document.createElement("h2");
 const headingText = document.createTextNode("Dynamic heading");
 heading.appendChild(headingText);
 heading.classList.add("blue");
-result.appendChild(heading);
+// result.appendChild(heading);
 
 console.log(result.children);
