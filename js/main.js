@@ -1,41 +1,31 @@
-function morning(name) {
-    // console.log(`good morning bob`);
+// ARRAY ITERATORS
+// FOREACH, MAP, FILTER, FIND, REDUCE
+// ITERATE OVER ARRAY, NO FOR LOOP REQUIRED
+// ACCEPT CALLBACK FUNCTION AS AN ARGUMENT, CALLS CALLBACK AGAINST EACH ITEM IN AN ARRAY. REFERENCE ITEM IN THE CALLBACK PARAMETER
 
-    return `good morning ${name.toUpperCase()}`;
-}
+// const numbers = [0, 1, 2, 3, 4];
 
-function afternoon(name) {
-    return `good afternoon ${name.repeat(3)}`
-}
+// // SHOW ALL NUMBERs
 
-function greet(name, callback) {
-    // callback()
-    const myName = "john";
-    console.log(`Hello ${callback(name)}, my name is ${myName}`);
-    
-}
-
-greet("pinky", morning);
-greet("lulu", afternoon);
-
-// CALLBACK FUNCTIONS, HIGHER ORDER FUNCTIONS, FUNCTIONS AS FIRST CLASS OBJECTS/CITIZENS
-// FUNCTIONS ARE FIRST CLASS OBJECTS - STORED IN A VARIABLE(EXPRESSION), PASSED AS AN ARGUMENT TO ANOTHER FUNCTION, RETURN FROM THE FUNCTION (CLOSURE)
-
-// HIGHER ORDER FUNCTIONS - ACCEPTS ANOTHER FUNCTION AS AN ARGUMENT OR RETURNS ANOTHER FUNCTION AS A RESULT
-
-// CALLBACK FUNCTIONS - PASSED TO ANOTHER FUNCTION AS AN ARGUMENT AND EXECUTED INSIDE THAT FUNCTION
-
-
-
-
-// function greetMorning(name) {
-//     const myName = "john";
-//     console.log(`Good morning ${name}, my name is ${myName}`);
+// for (let i = 0; i < numbers.length; i++) {
+//     console.log(i);
 // }
 
-// function greetAfternoon(name) {
-//     const myName = "john";
-//     console.log(`Good afternoon ${name}, my name is ${myName}`);
-// }
+// FOREACH
+// DOES NOT RETURN NEW ARRAY
 
-// KEEP REPEATING 
+const people = [
+    { name: "lulu", age: 20, position: "developer" },
+    { name: "pinky", age: 33, position: "designer" },
+    { name: "montu", age: 77, position: "ceo" }
+];
+
+function showPerson(person) {
+    console.log(person.position.toUpperCase());
+}
+
+// FOR EACH CALLS THE CALLBACK FUNCTION FOR EACH ITEM IN ARRAY ONE TIME
+// people.forEach(showPerson); 
+people.forEach(function (item) {
+    console.log(item.name.toUpperCase());
+})
