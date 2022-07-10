@@ -1,10 +1,11 @@
 // NODE-LIST IS AN ARRAY LIKE OBJECT
 // INDEX, LENGTH PROPERTY BUT NOT ARRAY METHODS
 
-// PARENT ELEMENT
+// PREVIOUS ELEMENT SIBLING
+// NEXT ELEMENT SIBLING
 
-const heading = document.querySelector("h2");
-// console.log(heading.parentElement.parentElement.parentElement.parentElement);
+const first = document.querySelector(".first");
+first.nextElementSibling.style.color = "red";
+// NO NEED TO WORRY ABOUT WHITESPACE
 
-const parent = heading.parentElement;
-parent.style.color = "red";
+const last = document.querySelector("#last");
