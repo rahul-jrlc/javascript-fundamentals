@@ -1,13 +1,20 @@
-// CURRENT TARGET - ALWAYS REFERS TO THE ELEMENT TO WHICH THE EVENT HANDLER HAS BEEN ATTACHED TO
-// TARGET - IDENTIFIES THE ELEMENT ON WHICH THE EVENT OCCURED
+// EVENT PROPAGATION
+// REFERS TO HOW AN EVENT TRAVELS THROUGH THE DOM (DOM TREE)
+// THREE PHASES- EVENT CAPTURING, TARGET, EVENT BUBBLING
+// ALLOWS US TO SELECT DYNAMIC ELEMENTS
 
-const button = document.querySelectorAll(".button");
+const container = document.querySelector(".container");
+const listItems = document.querySelector(".list-items")
 
-button.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-        // console.log(e.currentTarget);
-        // e.currentTarget.style.color = "green"; // ENTIRE BUTTON GOES GREEN
-        console.log(e.target);
-        e.target.style.color = "green"; // EVENT OCCURS ON NESTED STRONG TAG
-    })
-})
+function showBubbling(e) {
+    console.log('current target', e.currentTarget);
+    console.log(('target', e.target));
+    if (e.target.classList.contains("link")) {
+        console.log("clicked on link");
+    }
+}
+
+listItems.addEventListener("click", showBubbling);
+// container.addEventListener("click", showBubbling);
+
+// document.addEventListener("click", showBubbling);
