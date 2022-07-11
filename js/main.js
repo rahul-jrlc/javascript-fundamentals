@@ -1,8 +1,18 @@
-// REMOVE
-// REMOVE CHILD
+// INNER HTML
+// TEXT CONTENT
 
-const result = document.querySelector("#result");
-// result.remove(); // DYNAMICALLY REMOVED FROM THE DOM
+const list = document.getElementById("first");
+const div = document.getElementById("second");
+const item = document.querySelector(".item");
 
-const heading = result.querySelector("h1");
-result.removeChild(heading);
+console.log(div.textContent); // GET BACK ONLY THE TEXT
+console.log(list.innerHTML); //  GET BACK ENTIRE HTML LINE
+
+const ul = document.createElement("ul");
+ul.innerHTML = `<li class="opopop">dynamically added using innerHTML</li>`
+
+document.body.appendChild(ul);
+
+const newVar = document.createElement("p");
+newVar.textContent = `dynamically added using text content`
+ul.append(newVar);
