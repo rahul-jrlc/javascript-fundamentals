@@ -1,18 +1,9 @@
-// INNER HTML
-// TEXT CONTENT
+// CHANGE CSS WITH STYLE PROPERTY
 
-const list = document.getElementById("first");
-const div = document.getElementById("second");
-const item = document.querySelector(".item");
+const random = document.querySelector(".random");
 
-console.log(div.textContent); // GET BACK ONLY THE TEXT
-console.log(list.innerHTML); //  GET BACK ENTIRE HTML LINE
+// random.style.color = "white"; // VERY LENGTHY
+// random.style.fontSize = "3rem"; // HAVE TO ADD PROPERTIES ONE BY ONE
+// random.style.background = "blue";
 
-const ul = document.createElement("ul");
-ul.innerHTML = `<li class="opopop">dynamically added using innerHTML</li>`
-
-document.body.appendChild(ul);
-
-const newVar = document.createElement("p");
-newVar.textContent = `dynamically added using text content`
-ul.append(newVar);
+random.classList.add("title");
