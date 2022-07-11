@@ -1,20 +1,14 @@
-// EVENT PROPAGATION
-// REFERS TO HOW AN EVENT TRAVELS THROUGH THE DOM (DOM TREE)
-// THREE PHASES- EVENT CAPTURING, TARGET, EVENT BUBBLING
-// ALLOWS US TO SELECT DYNAMIC ELEMENTS
+// SUBMIT EVENT LISTENER
+// PREVENT DEFAULT
+// HOW TO GET A VALUE
 
-const container = document.querySelector(".container");
-const listItems = document.querySelector(".list-items")
+const form = document.getElementById("form");
+const name = document.getElementById("name");
+const password = document.getElementById("password");
 
-function showBubbling(e) {
-    console.log('current target', e.currentTarget);
-    console.log(('target', e.target));
-    if (e.target.classList.contains("link")) {
-        console.log("clicked on link");
-    }
-}
-
-listItems.addEventListener("click", showBubbling);
-// container.addEventListener("click", showBubbling);
-
-// document.addEventListener("click", showBubbling);
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    console.log("form submitted");
+    console.log(name.value);
+    console.log(password.value);
+})
