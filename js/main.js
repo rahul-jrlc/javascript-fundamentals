@@ -1,19 +1,24 @@
-// KEY EVENTS
-// KEY PRESS - WHEN KEY IS PRESSED
-// KEY DOWN - WHEN KEY IS DOWN
-// KEYUP - WHEN KEY IS RELEASED
+// EVENT OBJECT ARGUMENTE, EVT
+// INFO ABOUT TRIGGERED EVENT
+// EVENT.TYPE
+// EVENT.CUURENT TARGET
+// THIS KEYWORD
+// PREVENT DEFAULT () - PREVENTS DEFAULT BEHAVIOUR
 
-const nameInput = document.getElementById("name");
+const heading = document.querySelector("h1");
+const button = document.querySelector(".button");
+const link = document.querySelector("#link")
 
-// nameInput.addEventListener("keypress", function () {
-//     console.log(("pressed a key"));
-// })
-
-// nameInput.addEventListener("keydown", function () {
-//     console.log(("pressed a key"));
-// });
-
-nameInput.addEventListener("keyup", function () {
-    // console.dir(nameInput);
-    console.log(nameInput.value);
+heading.addEventListener("click", function (event) {
+    // console.log(event.currentTarget);
+    event.currentTarget.classList.add("blue");
+    console.log(this);
 });
+
+button.addEventListener("click", function (event) {
+    console.log(event.type);
+});
+
+link.addEventListener("click", function (e) {
+    e.preventDefault();
+})
