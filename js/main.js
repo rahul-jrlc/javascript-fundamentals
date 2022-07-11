@@ -1,24 +1,13 @@
-// EVENT OBJECT ARGUMENTE, EVT
-// INFO ABOUT TRIGGERED EVENT
-// EVENT.TYPE
-// EVENT.CUURENT TARGET
-// THIS KEYWORD
-// PREVENT DEFAULT () - PREVENTS DEFAULT BEHAVIOUR
+// CURRENT TARGET - ALWAYS REFERS TO THE ELEMENT TO WHICH THE EVENT HANDLER HAS BEEN ATTACHED TO
+// TARGET - IDENTIFIES THE ELEMENT ON WHICH THE EVENT OCCURED
 
-const heading = document.querySelector("h1");
-const button = document.querySelector(".button");
-const link = document.querySelector("#link")
+const button = document.querySelectorAll(".button");
 
-heading.addEventListener("click", function (event) {
-    // console.log(event.currentTarget);
-    event.currentTarget.classList.add("blue");
-    console.log(this);
-});
-
-button.addEventListener("click", function (event) {
-    console.log(event.type);
-});
-
-link.addEventListener("click", function (e) {
-    e.preventDefault();
+button.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+        // console.log(e.currentTarget);
+        // e.currentTarget.style.color = "green"; // ENTIRE BUTTON GOES GREEN
+        console.log(e.target);
+        e.target.style.color = "green"; // EVENT OCCURS ON NESTED STRONG TAG
+    })
 })
