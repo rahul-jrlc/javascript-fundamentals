@@ -1,9 +1,11 @@
-// CHANGE CSS WITH STYLE PROPERTY
+// SELECT ELEMENT
+// ADD EVENT LISTENER
+// WHAT EVENT, WHAT TO DO
 
-const random = document.querySelector(".random");
+const button = document.querySelector(".button");
+const heading = document.querySelector("h2");
 
-// random.style.color = "white"; // VERY LENGTHY
-// random.style.fontSize = "3rem"; // HAVE TO ADD PROPERTIES ONE BY ONE
-// random.style.background = "blue";
-
-random.classList.add("title");
+button.addEventListener("click", function () {
+    console.log("button clicked");
+    heading.classList.add("red");
+})
