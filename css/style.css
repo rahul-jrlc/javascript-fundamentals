@@ -18,3 +18,10 @@
     font-size: 1.2rem;
     border: none;
 }
+
+.design {
+    background: blue;
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+}
