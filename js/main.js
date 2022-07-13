@@ -1,4 +1,4 @@
-// IF STATEMENTS
+// ELSE IF STATEMENTS
 
 var firstName = "pinky";
 var lastName = "shawty";
@@ -9,15 +9,24 @@ var mkc; // undefined
 
 // FALSY VAlUES = false, nul, undefined, "", 0, -0, Nan --- evaluate to false indside if conditional
 
-if (mkc) {
-    console.log("truthy value");
-} else {
-    console.log("falsy value");
-}
+// if (mkc) {
+//     console.log("truthy value");
+// } else {
+//     console.log("falsy value");
+// }
 
     // conditions
-// if (age === 45) {
-//     // do something
-// } else {
-//     // do soemthing else
-// }
+if (age <= 40) {
+    // do something
+} else if (age > 40 && age < 50) { 
+    // && - AND
+    // || - OR
+
+} else if (age < 0) {
+    // OTHERWISE PREVENT SOMETHING
+} else {
+    // GREATER THAN 50
+    // OTHERWISE...
+}
+
+// COMPARISON OPERATORS -- !=== , !
