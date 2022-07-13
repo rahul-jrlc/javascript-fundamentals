@@ -1,24 +1,24 @@
-// OOP
-// COMBINE GROUP OF RELATED VARIABLES AND FUNCTIONS IN A UNIT
-// UNIT -OBJECT, VARIABLES - PROPERTY, FUNCTIONS - METHODS
+// VARIABLE
+// TELL THE COMPUTER TO REMEMBER SOMETHING
+// DECLARING VARIABLE, THEN ASSIGNING VALUES
+var name = "pinky"; // Data Type - string
+var id = 32223; // Number
+var alive = true; // Boolean
 
-const baseSalary = 30000;
-const overtime = 20;
-const rate = 20;
+// ASSIGNING NEW VALUES
+name = "lulu";
+id = 222222;
+alive = false;
 
-// HAVE TO PASS PARAMETERS IN FUNCTION HERE
-function getWage(cashInHand, overtime, rate) { // PROCEDURAL
-    return cashInHand + (overtime * rate);
-};
+var blah; // Declaring a variable, not assigning value, Data type undefined
+blah = null; // Holds nothing.
 
-// ENCAPSULATION - COMBINING VARIABLES AND RELATED FUNCTIONS INTO A SINGLE UNIT, AN OBJECT
-const employee = {
-    baseSalary: 30000,
-    overtime: 10,
-    rate: 20,
-    getWage: function () { // EVALUATES TO WHATEVER IS RETURNED
-        return this.baseSalary + (this.overtime * this.rate);
-    }
-};
-const ctc = employee.getWage();
-console.log(`ctc of employee is ${ctc}.`);
+console.log(name);
+// Console - object. Log - method.
+console.log(id);
+console.log(alive);
+console.log(blah);
+
+// String Concatenation
+name = name + " tinky";
+console.log(name);
