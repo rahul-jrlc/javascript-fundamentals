@@ -1,33 +1,14 @@
-// OBJECTS
-var dog = {
-    name: "lolo",
-    type: "dog"
+// FOR LOOPS
+
+var names = ["popo", "lolo", "oloo", "pinky", "montu", "pintu"];
+var numNames = names.length;
+
+// INITIALIZE --- TEST -- INCREMENT
+for (let i = 0; i < numNames; i++) {
+    console.log(names[i]);
 };
-var cat = {
-    name: "popo",
-    type: "cat"
+console.log("--------------------------");
+// going backwards
+for (let i = names.length - 1; i >= 0; i--) {
+    console.log(names[i]);
 };
-console.log(dog);
-console.log(cat);
-
-var petNames = ["lolo", "popo"];
-console.log(petNames);
-
-var pets = [{  // OBJECT LITERAL
-    name: "lolo",
-    type: "dog"
-}, cat];
-console.log(pets);
-
-pets.push({ name: "roxy", type: "dog" });
-console.log(pets);
-
-// ADDING PROPERTIES TO OBJECTS
-cat.age = 88; // DOT NOTATION
-dog["age"] = 100; // BRACKET NOTATION
-console.log(pets);
-
-console.log(dog);
-
-pets[0].age = 999;
-pets[2]["age"] = 19999;
