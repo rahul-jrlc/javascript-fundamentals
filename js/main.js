@@ -26,8 +26,14 @@ function eatPopcorn() {
     console.log(accountBalance);
 };
 
-// CALLING THE FUNCTION (INVOKING)
-drinkBeer();
-drinkBeer()
-eatBurger();
-eatPopcorn();
+var mealList = [drinkBeer, drinkBeer, eatBurger, drinkBeer];
+
+// FUNCTION PARAMETERS AND ARGUMENTS
+function dayTrip(meals) {
+    for (let i = 0; i < meals.length; i++) {
+        meals[i]();
+        // meals[i].call();
+    }
+}
+
+dayTrip(mealList);
