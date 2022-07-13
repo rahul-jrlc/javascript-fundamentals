@@ -13,12 +13,21 @@ alive = false;
 var blah; // Declaring a variable, not assigning value, Data type undefined
 blah = null; // Holds nothing.
 
-console.log(name);
-// Console - object. Log - method.
-console.log(id);
-console.log(alive);
-console.log(blah);
-
 // String Concatenation
 name = name + " tinky";
 console.log(name);
+
+// COMPLEX DATA TYPES - ARRAY, OBJECTS, FUNCTIONS, DATE, DOM
+// WHAT MAKES A COMPLEX DATA TYPE COMPLEX - PROPERTIES.
+//Arrays(lists)
+var myArr;
+myArr = ["bobo", "lolo", "dolo", "solo"];
+console.log(myArr);
+
+// Array properties
+//Length
+console.log(myArr.length);
+console.log(myArr[0]); // Index
+console.log(myArr[1]);
+console.log(myArr[2]);
+console.log(myArr[3]);
