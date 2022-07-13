@@ -1,19 +1,27 @@
-var firstName = "pinky";
-var lastName = "shawty";
-var age = 22;
-var first = true;
-var last = false;
-var mkc; // undefined
+// ARRAYS
 
-if (first === last) {
-    console.log("not possible");
-} else {
-    console.log("blah");
-    if (age) {
-        console.log(age);
-    }
-}
+var chars = ["montu", "pintu", "tinku", "bobby"]; // CREATE AN EMPTY ARRAY
+console.log(chars);
+console.log(chars.length);
+console.log(chars[0]);
+console.log(chars[chars.length - 1]);
 
-// TERNARY OPERATOR/STATEMENT -- ALTERNATIVE TO IF - ELSE STATEMENT
-(first === last) ? console.log("nope") : console.log("yes");
-//condition ------- if true ------------ else
+// ADD ITEMS TO ARRAY
+chars.push("new1"); // PUSH ADDS NEW ITEMS TO THE END OF THE ARRAY
+chars.push("new2");
+console.log(chars);
+
+// REMOVE ITEMS FROM ARRAY
+chars.pop() // POP REMOVES LAST ITEM FROM ARRAY
+console.log(chars);
+
+// ADD TO START OF ARRAY / BOTTOM OF STACK
+chars.unshift("newstart1");
+chars.unshift("new2");
+console.log(chars);
+
+// REMOVE FROM START OF ARRAY
+chars.shift();
+console.log(chars);
+
+console.log(chars.shift()); // LOGS REMOVED ITEM
