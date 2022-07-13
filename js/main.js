@@ -1,14 +1,21 @@
-// FOR LOOPS
-
-var names = ["popo", "lolo", "oloo", "pinky", "montu", "pintu"];
-var numNames = names.length;
-
-// INITIALIZE --- TEST -- INCREMENT
-for (let i = 0; i < numNames; i++) {
-    console.log(names[i]);
+// FOR...IN LOOPS --- USED WHEN LENGTH UNKNOWN -- OBJECTS
+var monsters = {
+    canada: "sasquatch",
+    nepal: "yeti",
+    scotland: "loch ness monster"
 };
-console.log("--------------------------");
-// going backwards
-for (let i = names.length - 1; i >= 0; i--) {
-    console.log(names[i]);
-};
+console.log(monsters);
+// console.log(monsters.length); // OBJECT
+
+//  var---in--object
+for (let key in monsters) {
+    // console.log(key);
+    // console.log(monsters[key]); // key is the container temporarily holding the properties and associated values
+    console.log(`In ${key}, we have the ${monsters[key]}`);
+}
+
+// FOR ARRAY
+var pets = ["lolo", "popo", "tinku"];
+for (let item in pets) {
+    
+}
