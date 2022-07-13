@@ -1,34 +1,33 @@
-// WHILE AND DO WHILE
+// FUNCTIONS
 
-// WHILE LOOP
+//food prices
+var beer = 70;
+var burger = 100;
+var popcorn = 300;
 
-// while (condition) {
-//     statements
-// }
+// user's money
+var accountBalance = 1000;
 
-// DO WHILE LOOPS
+// drink beer
+function drinkBeer() {
+    accountBalance = accountBalance - beer;
+    console.log(accountBalance);
+};
 
-// do {
-//     statements
-// } while (condition) {
+// eat burger
+function eatBurger() {
+    accountBalance = accountBalance - burger;
+    console.log(accountBalance);
+};
 
-// }
+// eat popcorn
+function eatPopcorn() {
+    accountBalance = accountBalance - popcorn;
+    console.log(accountBalance);
+};
 
-let total = 0;
-
-while (total < 5) { // RUNS IF CONDITION EVALUATES TO TRUE
-    total++;
-
-    if (total === 3) {
-        // continue;  // NOT RUN ANY CODE, SKIP AND GO TO TOP AND RUN NEXT ITERATION
-        break; // BREAKS OUT OF THE LOOP
-    }
-    console.log(`total = ${total}`);
-}
-
-let n = 1000;
-
-do {  // RUNS THE BLOCK OF CODE THAT IS EXECUTED UNTIL WHILE CONDITION IS EVALUATED TO FALSE --- WILL RUN ATLEAST ONCE
-    n++;
-    console.log(`n is ${n}`);
-} while (n < 5);
+// CALLING THE FUNCTION (INVOKING)
+drinkBeer();
+drinkBeer()
+eatBurger();
+eatPopcorn();
