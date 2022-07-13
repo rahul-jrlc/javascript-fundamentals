@@ -1,33 +1,33 @@
-// MANIPULATING AND SORTING ARRAYS
+// OBJECTS
+var dog = {
+    name: "lolo",
+    type: "dog"
+};
+var cat = {
+    name: "popo",
+    type: "cat"
+};
+console.log(dog);
+console.log(cat);
 
-var chars = ["montu", "pintu", "tinku", "bobby"]; // CREATE AN EMPTY ARRAY
+var petNames = ["lolo", "popo"];
+console.log(petNames);
 
-chars.splice(0, 1, "nEWitem");
-        // start, number of items to be removed, new element to be inserted
-console.log(chars);
+var pets = [{  // OBJECT LITERAL
+    name: "lolo",
+    type: "dog"
+}, cat];
+console.log(pets);
 
-chars.splice(1, 2, "removed 2 items");
-console.log(chars);
+pets.push({ name: "roxy", type: "dog" });
+console.log(pets);
 
-chars.splice(1, 1, "one", "two");
-console.log(chars);
+// ADDING PROPERTIES TO OBJECTS
+cat.age = 88; // DOT NOTATION
+dog["age"] = 100; // BRACKET NOTATION
+console.log(pets);
 
-chars.splice(1, 2); // NO NEW ELEMENT INSERTED
-console.log(chars);
+console.log(dog);
 
-chars.push("push one");
-chars.push("push two");
-console.log(chars);
-
-// SORTING
-
-chars.reverse() // REVERSES THE ITEMS IN ARRAY IN PLACE
-console.log(chars);
-
-chars.sort();
-console.log(chars); // FIRST SORTED UPPERCASE, THEN LOWERCASE
-
-console.log(chars.indexOf("pompom")); // RETURNS -1 IF STR NOT FOUND
-console.log(chars.indexOf("push one"));
-
-console.log(chars.lastIndexOf("bobby")); // STARTS FROM END OF LIST
+pets[0].age = 999;
+pets[2]["age"] = 19999;
