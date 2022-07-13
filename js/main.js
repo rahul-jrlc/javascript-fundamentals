@@ -1,39 +1,20 @@
-// FUNCTIONS
+// ARROW FUNCTIONS - ES6
+// WORKS BEST IN CALLBACK FUNCTION SCENARIOS
+// PARANTHESES AROUND INPUT IF MORE THAN ONE
+// CURLY BRACES AROUND FUNCTION BODY IF MORE THAN ONE LINE/COMMAND
+// RETURN ONLY NEEDED IF MORE THAN ONE LINE OF CODE
 
-//food prices
-var beer = 70;
-var burger = 100;
-var popcorn = 300;
+var numbers = [123, 234, 345, 456, 567];
+var names = ["lolo", "popo", "lulu", "mono", "tinku", "pinky"];
 
-// user's money
-var accountBalance = 1000;
+// SIMPLE FUNCTION SYNTAX
+// CREATE A NEW ARAY OF THE VALUES FROM THE ARRAY GREATER THAN 100
+let big = numbers.filter(function (item) {
+    return item > 100;
+});
+console.log(big);
 
-// drink beer
-function drinkBeer() {
-    accountBalance = accountBalance - beer;
-    console.log(accountBalance);
-};
+// ARROW FUNCTION
+let bigA = numbers.filter(item => item > 300);
+console.log(bigA);
 
-// eat burger
-function eatBurger() {
-    accountBalance = accountBalance - burger;
-    console.log(accountBalance);
-};
-
-// eat popcorn
-function eatPopcorn() {
-    accountBalance = accountBalance - popcorn;
-    console.log(accountBalance);
-};
-
-var mealList = [drinkBeer, drinkBeer, eatBurger, drinkBeer];
-
-// FUNCTION PARAMETERS AND ARGUMENTS
-function dayTrip(meals) {
-    for (let i = 0; i < meals.length; i++) {
-        meals[i]();
-        // meals[i].call();
-    }
-}
-
-dayTrip(mealList);
