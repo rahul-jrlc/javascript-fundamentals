@@ -1,33 +1,23 @@
-// VARIABLE
-// TELL THE COMPUTER TO REMEMBER SOMETHING
-// DECLARING VARIABLE, THEN ASSIGNING VALUES
-var name = "pinky"; // Data Type - string
-var id = 32223; // Number
-var alive = true; // Boolean
+// IF STATEMENTS
 
-// ASSIGNING NEW VALUES
-name = "lulu";
-id = 222222;
-alive = false;
+var firstName = "pinky";
+var lastName = "shawty";
+var age = 22;
+var first = true;
+var last = false;
+var mkc; // undefined
 
-var blah; // Declaring a variable, not assigning value, Data type undefined
-blah = null; // Holds nothing.
+// FALSY VAlUES = false, nul, undefined, "", 0, -0, Nan --- evaluate to false indside if conditional
 
-// String Concatenation
-name = name + " tinky";
-console.log(name);
+if (mkc) {
+    console.log("truthy value");
+} else {
+    console.log("falsy value");
+}
 
-// COMPLEX DATA TYPES - ARRAY, OBJECTS, FUNCTIONS, DATE, DOM
-// WHAT MAKES A COMPLEX DATA TYPE COMPLEX - PROPERTIES.
-//Arrays(lists)
-var myArr;
-myArr = ["bobo", "lolo", "dolo", "solo"];
-console.log(myArr);
-
-// Array properties
-//Length
-console.log(myArr.length);
-console.log(myArr[0]); // Index
-console.log(myArr[1]);
-console.log(myArr[2]);
-console.log(myArr[3]);
+    // conditions
+// if (age === 45) {
+//     // do something
+// } else {
+//     // do soemthing else
+// }
