@@ -1,27 +1,33 @@
-// ARRAYS
+// MANIPULATING AND SORTING ARRAYS
 
 var chars = ["montu", "pintu", "tinku", "bobby"]; // CREATE AN EMPTY ARRAY
-console.log(chars);
-console.log(chars.length);
-console.log(chars[0]);
-console.log(chars[chars.length - 1]);
 
-// ADD ITEMS TO ARRAY
-chars.push("new1"); // PUSH ADDS NEW ITEMS TO THE END OF THE ARRAY
-chars.push("new2");
+chars.splice(0, 1, "nEWitem");
+        // start, number of items to be removed, new element to be inserted
 console.log(chars);
 
-// REMOVE ITEMS FROM ARRAY
-chars.pop() // POP REMOVES LAST ITEM FROM ARRAY
+chars.splice(1, 2, "removed 2 items");
 console.log(chars);
 
-// ADD TO START OF ARRAY / BOTTOM OF STACK
-chars.unshift("newstart1");
-chars.unshift("new2");
+chars.splice(1, 1, "one", "two");
 console.log(chars);
 
-// REMOVE FROM START OF ARRAY
-chars.shift();
+chars.splice(1, 2); // NO NEW ELEMENT INSERTED
 console.log(chars);
 
-console.log(chars.shift()); // LOGS REMOVED ITEM
+chars.push("push one");
+chars.push("push two");
+console.log(chars);
+
+// SORTING
+
+chars.reverse() // REVERSES THE ITEMS IN ARRAY IN PLACE
+console.log(chars);
+
+chars.sort();
+console.log(chars); // FIRST SORTED UPPERCASE, THEN LOWERCASE
+
+console.log(chars.indexOf("pompom")); // RETURNS -1 IF STR NOT FOUND
+console.log(chars.indexOf("push one"));
+
+console.log(chars.lastIndexOf("bobby")); // STARTS FROM END OF LIST
