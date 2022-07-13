@@ -1,20 +1,14 @@
-// ARROW FUNCTIONS - ES6
-// WORKS BEST IN CALLBACK FUNCTION SCENARIOS
-// PARANTHESES AROUND INPUT IF MORE THAN ONE
-// CURLY BRACES AROUND FUNCTION BODY IF MORE THAN ONE LINE/COMMAND
-// RETURN ONLY NEEDED IF MORE THAN ONE LINE OF CODE
+// VARIABLE SCOPE
 
-var numbers = [123, 234, 345, 456, 567];
-var names = ["lolo", "popo", "lulu", "mono", "tinku", "pinky"];
 
-// SIMPLE FUNCTION SYNTAX
-// CREATE A NEW ARAY OF THE VALUES FROM THE ARRAY GREATER THAN 100
-let big = numbers.filter(function (item) {
-    return item > 100;
-});
-console.log(big);
+var firstName = "Pintu"; // GLOBAL VARIABLE-- ACCESSIBLE TO ALL BLOCKS OF CODE
 
-// ARROW FUNCTION
-let bigA = numbers.filter(item => item > 300);
-console.log(bigA);
+function x() {
+    var firstName = "Ginny"; // DECLARED INSIDE FUNCTION --- LOCAL VARIABLE
+    console.log(`local variable: ${firstName}`); // FIRST LOOKS FOR VARIABLE IN LOCAL SCOPE
+}
+x();
+console.log(firstName); // WILL LOG THE GLOBAL VARIABLE
 
+y = () => console.log(firstName);
+y();  // ACCESSES THE GLOBAL FIRST NAME
