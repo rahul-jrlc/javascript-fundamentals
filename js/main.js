@@ -1,19 +1,21 @@
-// HOISTING
-// THE PROCESS OF TAKING TWO PASSES THROUGH THE JS FILE
-// FIRST PASS HOISTS ALL DECLARATIONS TO THE TOP OF THE FILE
-// FIRST PASS - HOISTS ALL VARIABLES AND FUNCTIONS TO THE TOP, ASSIGNS THEM VALUE OF UNDEFINED
+// WORKING WITH STRINGS IN JAVASCRIPT
 
+let str1 = "popololomomo";
 
+console.log(str1.charAt(3)); // RETURNS THE CHARACTER AT SPECIFIED INDEX
 
-getName(); // WILL RUN EVEN THOUGH BEING INVOKED BEFORE FUNCTION DECLARATION
-console.log(x); // RETURNS UNDEFINED
-console.log(getName); // LOGS ENTIRE FUNC
+console.log(str1.charCodeAt(0)); // RETURNS THE UNICODE VALUE OF SPECIFIED INDEX
 
-var x = 9;
+console.log(str1.concat("CONCATSTRING"));
 
-function getName() {
-    console.log("hello bye ");
-};
+console.log(str1.endsWith("momo"));
 
-// getName(); // INVOKED AFTER FUNCTION DECLARATION
-// console.log(x); // VARIABLE HAS ALREADY BEEN DECLARED AND ASSIGNED VALUE ABOVE
+console.log(str1.includes("k"));
+
+console.log(str1.indexOf("momo"));
+
+console.log(str1.lastIndexOf('p'));
+
+console.log(str1.match("mo"));
+
+console.log(str1.slice(0, 5));
