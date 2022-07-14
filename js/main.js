@@ -1,21 +1,14 @@
-// WORKING WITH STRINGS IN JAVASCRIPT
+// STRING SPLIT AND ARRAY JOIN METHODS
+// STRING TO ARRAY - str.split()
+// ARRAY TO STRING - arr.join()
 
-let str1 = "popololomomo";
+let sentence = "hello how are you fine thank you";
 
-console.log(str1.charAt(3)); // RETURNS THE CHARACTER AT SPECIFIED INDEX
+let words = sentence.split(" ");
+console.log(words);
 
-console.log(str1.charCodeAt(0)); // RETURNS THE UNICODE VALUE OF SPECIFIED INDEX
+let chars = sentence.split("you");
+console.log(chars);
 
-console.log(str1.concat("CONCATSTRING"));
-
-console.log(str1.endsWith("momo"));
-
-console.log(str1.includes("k"));
-
-console.log(str1.indexOf("momo"));
-
-console.log(str1.lastIndexOf('p'));
-
-console.log(str1.match("mo"));
-
-console.log(str1.slice(0, 5));
+let hyphen = words.join("-");
+console.log(hyphen);
