@@ -1,19 +1,16 @@
-// FOR EACH LOOP ARRAY - CALLS A CALLBACK FUNCTION ONCE FOR EACH ITEM IN ARRAY
+// ARRAY MAP() METHOD
+// CREATES A NEW ARRAY POPULATED WITH RESULTS OF CALLING A CALLBACK FUNC ON EVERY ELEMENT IN THE CALLING ARRAY
+
+// CALLBACK FUNCTION IN MAP ACCEPTS SAME ARGUMENTS AS FOR EACH CALLBACK FN, 
+// THE CURRENT ELEMENT BEING PROCESSED IN THE ARRAY (VALUE/ITEM), THE INDEX OF CURRENT ELEMENT AND THE ENTIRE ARRAY ON WHICH MAP WAS CALLED.
 
 let myArr = ["one", "two", "three", "four", "five", "six", "seven", "eight"];
 
-// CONVERT ALL STRINGS TO UPPERCASE EXCEPT SIX
-// CONSOLE LOG THEM
-// ANONYMOUS FUNCTION
+// determine length of each str and save it in an array
 
-// CALLBACK FUNCTION HAS THREE ARGUMENTS - current element being processed in the array, index of element(value) in that array, the array forEach was called upon.
-
-myArr.forEach(function (value, index, myArr) {
-    // console.log(value);
-    if (value !== "six") {
-        console.log(value.toUpperCase());
-
-    } else {
-        console.log(value);
-    }
+let strLength = myArr.map(function (item, index, array) {
+    return item.length; // RETURNS NEW ARRAY WITH EACH ELEMENT BEING THE RESULT OF THE CALLBACK FUNCTION
 });
+
+console.log(strLength);
+
