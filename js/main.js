@@ -1,14 +1,19 @@
-// STRING SPLIT AND ARRAY JOIN METHODS
-// STRING TO ARRAY - str.split()
-// ARRAY TO STRING - arr.join()
+// FOR EACH LOOP ARRAY - CALLS A CALLBACK FUNCTION ONCE FOR EACH ITEM IN ARRAY
 
-let sentence = "hello how are you fine thank you";
+let myArr = ["one", "two", "three", "four", "five", "six", "seven", "eight"];
 
-let words = sentence.split(" ");
-console.log(words);
+// CONVERT ALL STRINGS TO UPPERCASE EXCEPT SIX
+// CONSOLE LOG THEM
+// ANONYMOUS FUNCTION
 
-let chars = sentence.split("you");
-console.log(chars);
+// CALLBACK FUNCTION HAS THREE ARGUMENTS - current element being processed in the array, index of element(value) in that array, the array forEach was called upon.
 
-let hyphen = words.join("-");
-console.log(hyphen);
+myArr.forEach(function (value, index, myArr) {
+    // console.log(value);
+    if (value !== "six") {
+        console.log(value.toUpperCase());
+
+    } else {
+        console.log(value);
+    }
+});
