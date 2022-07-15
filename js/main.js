@@ -1,7 +1,6 @@
-// ARRAY CONCAT() METHOD
+// ARRAY INCLUDES() METHOD
+// CHECK TO SEE IF SOMETHING IS INSIDE AN ARRAY
+// RETURNS BOOLEAN
 
-let a = [2, 4, 5, 7, 8];
-let b = ["jkj", 9, 0909, "popo"];
-
-let nct = a.concat(b);
-console.log(nct);
+let names = ["one", "two", "threee "];
+console.log(names.includes(89));
