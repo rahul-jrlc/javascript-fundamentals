@@ -4,22 +4,24 @@
 // FUNCTIONS CAN BE ASSIGNED TO VARIABLES OR PASSED INTO OTHER FUNCTIONS(HIGHER ORDER FUNCTIONS)
 // RESULT IN SHORTER CODE DUE TO COMPOSITION OF FUNCTIONS, LESS LOGIC
 
-let myArr = [{ name: "bobo", age: 33 },
-    { name: "popo", age: 98 },
-    { name: "lolo", age: 21 },
-    { name: "chintu", age: 65 }];
+let myArr = [{ age: 33 },
+    { age: 98 },
+    { age: 21 },
+    { age: 65 }];
     
-// GET ARRAY OF ALL THE NAMES OF ALL THE ANIMALS
+// GET SUM OF ALL AGES
+
 // USING FOR LOOP
 
-let personName = [];
+let ageCount = 0;
 for (let i = 0; i < myArr.length; i++) {
-    personName.push(myArr[i].name);
+    ageCount += myArr[i].age;
 };
-console.log(personName);
+console.log(ageCount);
 
-// USING MAP
-// CALLS THE CALLBACK FUNCTION ONCE FOR EACH ELEMENT IN ARRAY, DOES WHATEVER SPECIFIED IN CALLBACK FUNCTION - RETURNS TRANSFORMED OBJECT
-
-let nameOfPerson = myArr.map((value, index, array) => value.name );
-console.log(nameOfPerson);
+// USING REDUCE
+let totalAge = myArr.reduce(function (prevVal, curVal, index) {
+    console.log(prevVal, curVal);
+    return prevVal + curVal.age;
+}, 0)
+console.log(totalAge);
